@@ -1,15 +1,16 @@
 /* ============================================================
    cabeça maluca — sistema visual
-   paper + ink + um único accent. Sem gradientes, sem glass.
+   azul + tinta + um único accent. Sem gradientes, sem glass.
    ============================================================ */
 
 :root {
-  --paper: #f4f1e9;
-  --paper-2: #ebe6da;
-  --ink: #16140f;
-  --muted: #6f695d;
-  --line: #c9c1b1;
-  --accent: #d63b00;
+  --paper: #eaf2fb;
+  --paper-2: #d9e8f8;
+  --rail-paper: #dfecfb;
+  --ink: #0a1f3c;
+  --muted: #4c6787;
+  --line: #adc4de;
+  --accent: #0a66c2;
   --serif: Georgia, "Times New Roman", serif;
   --sans: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "SFMono-Regular", "Courier New", monospace;
@@ -38,7 +39,7 @@ body::before {
   pointer-events: none;
   z-index: 99;
   opacity: .20;
-  background-image: radial-gradient(#8b8272 0.5px, transparent 0.5px);
+  background-image: radial-gradient(#6f8fb5 0.5px, transparent 0.5px);
   background-size: 5px 5px;
   mix-blend-mode: multiply;
 }
@@ -60,7 +61,7 @@ a:hover { color: var(--accent); }
   display: flex;
   flex-direction: column;
   gap: 26px;
-  background: var(--paper);
+  background: var(--rail-paper);
   z-index: 10;
 }
 .rail .logo {
@@ -407,7 +408,7 @@ section.bloco { margin: 76px 0 0; }
 }
 
 /* ---------- Modo caos ---------- */
-body[data-modo="caos"] { --accent: #1f8a5b; }
+body[data-modo="caos"] { --accent: #0047ff; }
 body[data-modo="caos"] h1.titulo { letter-spacing: -.07em; }
 body[data-modo="caos"] .ideia:nth-child(even) summary .t { transform: translateX(10px); }
 body[data-modo="caos"] .ideia:nth-child(odd) summary .t { transform: translateX(-6px); }
